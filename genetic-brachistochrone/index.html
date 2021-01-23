@@ -1,9 +1,13 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
 <script src="Logic.js"></script>
+<h2>Genetic Brachistochrone</h2>
+<button onclick="if (!timer) timer = window.setInterval(nextGen, 10)">Start</button>
+<button onclick="clearInterval(timer); timer = null">Stop</button>
 <canvas id="myChart" width="1100" height="600"></canvas>
+<p>Fitness</p>
 <canvas id="fitnesschart" width="1000" height="300"></canvas>
 <script>
-
+var timer
 var ctx = document.getElementById("myChart").getContext("2d");
 var ctx2 = document.getElementById("fitnesschart").getContext("2d");
 
@@ -97,7 +101,7 @@ const updateChart = ()=>{
 	fitnesschart.update()
 }
 
-window.setInterval(nextGen, 10)
+timer = window.setInterval(nextGen, 10)
 
 updateChart()
 </script>

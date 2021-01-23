@@ -7,7 +7,7 @@
  const STARTIING_POINT = 150
  const ENDING_POINT = 60
  const FIELD_HEIGHT = 100
- const NODES = 30
+ const NODES = 50
 
  const G = 9.81
 
